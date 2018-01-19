@@ -18,6 +18,8 @@ USER node-red
 # package.json contains Node-RED NPM module and node dependencies
 COPY package.json /usr/src/node-red/
 RUN npm install
+RUN npm install node-red-contrib-ftp
+RUN npm install node-red-contrib-http-request
 
 # User configuration directory volume
 EXPOSE 1880
