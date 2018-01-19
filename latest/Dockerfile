@@ -17,6 +17,7 @@ USER node-red
 
 # package.json contains Node-RED NPM module and node dependencies
 COPY package.json /usr/src/node-red/
+COPY settings.js /home/node-red/.node-red/
 RUN npm install
 RUN npm install node-red-contrib-ftp
 RUN npm install node-red-contrib-http-request
